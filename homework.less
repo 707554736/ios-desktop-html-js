@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  .app {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;
+    background-color: #fcfcfc;
+    flex-shrink: 0;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 8px 0px rgba(21, 21, 21, 0.09);
+    .close {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: none;
+    }
+  }
+}
+
+.scroll-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-point {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin-left: 10px;
+  background-color: rgba(201, 192, 238, 0.2);
+}
+.scroll-point.active {
+  background-color: rgba(201, 192, 238, 0.8);
+}
+
+@media (max-width: 1000px) {
+  .app-wrap {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1001px) {
+  .app-wrap {
+    max-width: 840px;
+  }
+}
